@@ -5,14 +5,14 @@ import { faEnvelope as farEnvelope } from '@fortawesome/free-regular-svg-icons';
 class Home extends Component {
   render() {
     return (
-      <section id="intro-container">
+      <section id="intro">
         <div className="intro">
           <h1>NICOLE ALLI</h1>
           <span id="tagline">Developer &#183; Equity & Diversity Advocate
                 &#183; She/Her &#183; Cat Lady
           </span>
           <div id="social-links">
-            <a href="https://github.com/" target="_blank">
+            <a href="https://github.com/nicoalli" target="_blank">
               <FontAwesomeIcon icon={['fab', 'github']}/></a>
             <a href="mailto:alli.nicolette@gmail.com" target="_blank">
               <FontAwesomeIcon icon={farEnvelope}/></a>
