@@ -15,6 +15,10 @@ class Main extends Component {
     return (
         <div>
           <header>
+            <input class="menu-btn" type="checkbox" id="menu-btn"/>
+            <label class="menu-icon" for="menu-btn">
+              <label class="menu-icon" for="menu-btn"><span class="menu-faIcon"></span></label>
+            </label>
             <ul className="navigation">
               <li><NavLink className="" to="/">home</NavLink></li>
               <li><NavLink to="/about-me">about me</NavLink></li>

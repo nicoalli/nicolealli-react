@@ -16,26 +16,27 @@ h2 {
   letter-spacing: 0.3rem;
 }
 section {
-	position: relative;
 	text-align: center;
-	height: 90vh;
-	width: 100%;
   padding-top: 10vh;
+  font-size: 1.3rem;
+  display: flex;
+  flex-wrap: wrap;
 }
 section > div {
-  position: absolute;
-	top: 50%; left: 50%;
-  transform: translate(-50%,-50%);
   width: 100%;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 /*
   ========================================
-  Navigation bg: #F4F4F4
+  Navigation
   ========================================
 */
 header {
 	position: fixed;
-	background: transparent  ;
+	background: transparent;
 	width: 100%;
 	height: 8vh;
 	top: 0px;
@@ -68,6 +69,9 @@ header {
 }
 .navigation a:hover{
 	border-bottom: 3px solid #CFCFCF;
+}
+.menu-btn {
+  display: none;
 }
 
 /*
@@ -113,7 +117,11 @@ header {
 */
 #about-me {
   background: rgb(255,245,246);
-  background: linear-gradient(230deg, rgb(255, 249, 249) 5%, rgba(232,215,218,1) 80%, rgb(230, 174, 183) 95%);
+  background: linear-gradient(
+              230deg,
+              rgb(255, 249, 249) 5%,
+              rgba(232,215,218,1) 80%,
+              rgb(230, 174, 183) 95%);
 }
 #about-me .col-wrapper {
   display: grid;
@@ -131,13 +139,17 @@ header {
   color: #aa868c;
 }
 #profilepic {
-	width: 350px;
+	width: 80%;
 	height: auto;
 }
 
 #skills {
   background: rgb(255,242,236);
-  background: linear-gradient(230deg, rgb(251, 247, 246) 5%, rgba(235,217,208,1) 80%, rgb(245, 203, 182) 95%);
+  background: linear-gradient(
+              230deg,
+              rgb(251, 247, 246) 5%,
+              rgba(235,217,208,1) 80%,
+              rgb(245, 203, 182) 95%);
 }
 #skills a {
   color: #aa7c65;
@@ -145,13 +157,235 @@ header {
   text-decoration: none;
 }
 
-
+/*
+  ========================================
+  Projects
+  ========================================
+*/
 #projects {
   background: rgb(238,255,243);
-  background: linear-gradient(230deg, rgb(241, 255, 245) 5%, rgba(200,218,205,1) 80%, rgba(156,199,168,1) 95%);
+  background: linear-gradient(
+              230deg, rgb(241, 255, 245) 5%,
+              rgba(200,218,205,1) 80%,
+              rgba(156,199,168,1) 95%);
 }
-#projects a {
-  font-weight: bold;
+#projects strong {
   color: #578162;
+}
+.projects-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 80%;
+  height: 40vh;
+  margin: 3em auto;
+}
+.project-wrapper {
+	position: relative;
+	height: 100%;
+	width: 400px;
+	transition: 200ms ease;
+  background: #f1fff5;
+  font-size: 1rem;
+}
+.project-overlay {
+  color: #f1fff5;
+  font-size: 1rem;
+  height: 50%;
+  width: 90%;
+  position: absolute;
+  top: -6%;
+  left: 5%;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background: rgb(156,199,185);
+  -webkit-box-shadow: 0px 10px 50px 2px rgba(0,0,0,0.15);
+  -moz-box-shadow: 0px 10px 50px 2px rgba(0,0,0,0.15);
+       box-shadow: 0px 10px 40px 2px rgba(0, 0, 0, 0.15);
+}
+.project-name {
+	text-transform: uppercase;
+	font-size: 1.5em;
+	letter-spacing: 1px;
+  margin: 1em auto 0.5em auto;
+}
+.project-tagline {
+  margin: 0;
+  font-size: 1em;
+  font-weight: bold;
+}
+.project-type {
+	 font-size: 1.5em;
+   color: #54765e;
+   margin: 0.75em 0;
+   display: flex;
+	 flex-direction: row;
+	 justify-content: space-evenly;
+}
+.project-type > div {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #f1fff5;
+  line-height: 2em;
+  /*-webkit-box-shadow: 0px 5px 10px 2px rgba(0,0,0,0.15);
+  -moz-box-shadow: 0px 5px 10px 2px rgba(0,0,0,0.15);
+       box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.15);*/
+}
+.project-details {
+	position: absolute;
+	bottom: 0;
+	color: #54765e;
+  font-size: 1.2em;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 1em auto;
+}
+.project-description {
+  padding: 0.5em;
+}
+.project-link {
+  color: #f1fff5;
+  font-size: 0.75em;
+	text-transform: uppercase;
+	padding: 0.5rem;
+  background: rgb(156,199,185);
+  margin: 0.2em auto;
+	width: 30%;
+	font-weight: 600;
+	letter-spacing: 1px;
+  font-weight: bold;
   text-decoration: none;
+	cursor: pointer;
+	-webkit-transition:all 200ms ease-in-out;
+  -moz-transition:all 200ms ease-in-out;
+  transition:all 200ms ease-in-out;
+}
+.project-link:hover {
+	/*background: #f1fff5;
+	color: #54765e;*/
+  -webkit-box-shadow: 0px 5px 10px 2px rgba(0,0,0,0.15);
+  -moz-box-shadow: 0px 5px 10px 2px rgba(0,0,0,0.15);
+       box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.15);
+}
+
+/*
+  ========================================
+  mobile phones
+  ========================================
+*/
+@media only screen and (max-width: 768px) {
+  html {
+    font-size: 12px;
+  }
+
+  header {
+    background: #fff;
+    position: unset;
+  }
+
+  header ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    overflow: hidden;
+    background-color: #fff;
+  }
+
+  .menu-icon {
+    cursor: pointer;
+    display: inline-block;
+    float: right;
+    padding: 12px 12px;
+    position: relative;
+    user-select: none;
+    font-size: 2rem;
+  }
+
+  .menu-icon .menu-faIcon {
+    background: #333;
+    display: block;
+    height: 2px;
+    position: relative;
+    transition: background .2s ease-out;
+    width: 18px;
+  }
+
+  .menu-icon .menu-faIcon:before,
+  .menu-icon .menu-faIcon:after {
+    background: #333;
+    content: '';
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all .2s ease-out;
+    width: 100%;
+  }
+
+  .menu-icon .menu-faIcon:before {
+    top: 5px;
+  }
+
+  .menu-icon .menu-faIcon:after {
+    top: -5px;
+  }
+
+  .menu-btn:checked ~ .navigation {
+    max-height: 240px;
+    position: relative;
+    background: #fff;
+  }
+
+  .menu-btn:checked ~ .menu-icon .menu-faIcon {
+    background: transparent;
+  }
+
+  .menu-btn:checked ~ .menu-icon .menu-faIcon:before {
+    transform: rotate(-45deg);
+  }
+
+  .menu-btn:checked ~ .menu-icon .menu-faIcon:after {
+    transform: rotate(45deg);
+  }
+
+  .menu-btn:checked ~ .menu-icon:not(.steps) .menu-faIcon:before,
+  .menu-btn:checked ~ .menu-icon:not(.steps) .menu-faIcon:after {
+    top: 0;
+  }
+
+  .navigation {
+    clear: both;
+    max-height: 0;
+    transition: max-height .2s ease-out;
+    float: unset;
+    text-align: center;
+    display: grid;
+    z-index: 100;
+  }
+
+  .projects-grid {
+    display: initial;
+    width: 90%;
+    height: 100%;
+  }
+
+  .project-wrapper {
+    height: 300px;
+    width: 350px;
+    margin: 0 auto 4em auto;
+  }
+
+  .project-type > div {
+    line-height: 2.6em;
+  }
+
+  #about-me .col-wrapper {
+    display: block;
+  }
+  #description {
+    text-align: center;
+  }
 }
