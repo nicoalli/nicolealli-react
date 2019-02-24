@@ -2,7 +2,11 @@
   "name": "nicolealli",
   "version": "0.1.0",
   "private": true,
+<<<<<<< HEAD
   "homepage": "http://nicolealli.com/",
+=======
+  "homepage": "http://nicolealli.com",
+>>>>>>> 3a3bd8167895caf07dc20beb8b7fb22ef289ae89
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.2",
     "@fortawesome/free-brands-svg-icons": "^5.1.0-11",
